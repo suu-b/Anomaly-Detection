@@ -2,14 +2,15 @@
 Anomaly Detection is a popular usecase of Machine Learning. As per wikipedia,
 > Anomaly Detection is generally understood to be the identification of rare items, events or observations which deviate significantly from the majority of the data and do not conform to a well defined notion of normal behavior.
 
-Therefore, it finds it application in software-industry. For instance, in monitoring of firm-resources, if suddenly CPU reaches 100% of consumption in non-working hours while the traffic is a flat-line, this cues a system failure or possible attack. A good Anomaly Detection system will flag this and alarm the relevant team.
+Therefore, it finds it application in software-industry. For instance, in monitoring of firm-resources - if suddenly CPU reaches 100% of consumption in non-working hours while the traffic is a flat-line, this cues a system failure or possible attack. A good Anomaly Detection system will flag this and alarm the relevant team.
 
-This system can be automated using ML by implementation of one/many of various algorithms/models. In this repo, I have tried using some of them: Isolation forest, K-NN etc.
+This system can be automated using ML by implementation of one/many of various algorithms/models. In this repo, I have tried using some of them: Isolation forest, k-NN etc.
 
 ***
 
 ## Dataset-1 
-Dataset-1 is a univariate time series which means a single variable historical series (with timestamps). There are a few data analysis jargons we must take into consideration to to understand the **nature** of the data:
+Dataset-1 is a univariate time series which means a single variabled, historical series (with timestamps). There are a few data analysis jargons we must take into consideration to understand the **nature** of the data:
+
 The data is a 30 day observations of a single numeric variable
 1. Trend: There is no monotonic increase or decrease. 
 2. Seasonality: No seasonality is detectable. 
@@ -63,6 +64,6 @@ plt.show()
     
 
 
-Clearly, the model should output the four dates: `2026-07-06`, `2026-07-08`, `2026-07-16` and `2026-07-22` as they are the anomalies -> far distant from the normal.
+Clearly, the model should output the four dates: `2026-07-06`, `2026-07-08`, `2026-07-16` and `2026-07-22` as they are the anomalies -> far distant from the normal.    
 I implemented **Isolation-forest**, **OC-SVM**, **k-NN**, and **Autoencoders** for the task. The results were differing. k-NN gave the best result. The following line (which i have to still think more about) passes the judgement:
 >k-NN’s local density approach aligns perfectly with small, single-variable data where anomalies are just points far from the cluster of normals.
