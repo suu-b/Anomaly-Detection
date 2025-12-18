@@ -7,11 +7,12 @@ Therefore, it finds it application in software-industry. For instance, in monito
 This system can be automated using ML by implementation of one/many of various algorithms/models. In this repo, I have tried using some of them: Isolation forest, k-NN etc.
 
 ***
+## Dataset-1
+`(\univariate_hours_studied_v_date)`
 
-## Dataset-1 
 Dataset-1 is a univariate time series which means a single variabled, historical series (with timestamps). There are a few data analysis jargons we must take into consideration to understand the **nature** of the data:
 
-The data is a 30 day observations of a single numeric variable
+The data is a 30 day observations of a single numeric variable which is number of hours studied by an individual.
 1. Trend: There is no monotonic increase or decrease. 
 2. Seasonality: No seasonality is detectable. 
 3. Stationarity: Almost stationary. 
@@ -64,6 +65,8 @@ plt.show()
     
 
 
-Clearly, the model should output the four dates: `2026-07-06`, `2026-07-08`, `2026-07-16` and `2026-07-22` as they are the anomalies -> far distant from the normal.    
+Clearly, the model should output the four dates: `2026-07-06`, `2026-07-08`, `2026-07-16` and `2026-07-22` as they are the anomalies -> far distant from the normal.
 I implemented **Isolation-forest**, **OC-SVM**, **k-NN**, and **Autoencoders** for the task. The results were differing. k-NN gave the best result. The following line (which i have to still think more about) passes the judgement:
 >k-NN’s local density approach aligns perfectly with small, single-variable data where anomalies are just points far from the cluster of normals.
+
+***
