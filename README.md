@@ -70,3 +70,8 @@ I implemented **Isolation-forest**, **OC-SVM**, **k-NN**, and **Autoencoders** f
 >k-NN’s local density approach aligns perfectly with small, single-variable data where anomalies are just points far from the cluster of normals.
 
 ***
+
+### LOF Streamlit app
+`/streamlit_app` contains a small streamlit app that I built to learnt how models are coded, converted to artifact and consumed by the interfaces in a web-app. I plan to make a fully-fledged, dynamic anomaly detection application.
+
+![Streamlit app](./README_files/streamlit_app_1.png)
